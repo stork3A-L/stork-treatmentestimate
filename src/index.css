@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-medical-950: #0a252c;
+  --color-medical-900: #12414e;
+  --color-medical-800: #1b5e6f;
+  --color-medical-700: #257d93;
+  --color-medical-600: #2e9ab6;
+  --color-medical-500: #46b2ce;
+  --color-medical-400: #6fc5db;
+  --color-medical-200: #b0e1ed;
+  --color-medical-100: #d3f0f7;
+  --color-medical-50: #f0fafd;
+  
+  --color-warm-beige: #f5f1e8;
+  --color-warm-card: #fdfdfb;
+  --color-warm-border: #e9e2d3;
+  --color-warm-dark: #4e483d;
+  
+  --color-coral-600: #e07a5f;
+  --color-coral-700: #cb6144;
+  --color-coral-500: #e8957f;
+  --color-coral-100: #fbeaeb;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-warm-beige);
+    color: var(--color-warm-dark);
+    font-family: var(--font-sans);
+  }
+}
+

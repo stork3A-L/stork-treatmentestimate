@@ -1,0 +1,6 @@
+{
+  "name": "生殖診所療程初估單",
+  "description": "生殖診所療程、檢查及藥物費用初估單互動式網頁工具。支援項目選取、劑量調整、夜間加價、即時計算與明細導出功能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
