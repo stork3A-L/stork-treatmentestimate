@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: './',
+    base: '/stork-treatmentestimate/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
