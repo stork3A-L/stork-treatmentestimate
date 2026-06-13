@@ -37,7 +37,8 @@ import {
   ShieldCheck,
   Stethoscope,
   Maximize2,
-  X
+  X,
+  Trash2
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -856,9 +857,19 @@ export default function App() {
                                 </div>
                               </div>
                             </div>
-                            <span className="font-mono text-medical-805 font-bold block whitespace-nowrap mt-0.5 text-[#065A60] self-start">
-                              {formatPrice(itemTotal)}
-                            </span>
+                            <div className="flex items-center gap-2 self-start mt-0.5">
+                              <span className="font-mono text-medical-805 font-bold block whitespace-nowrap text-[#065A60]">
+                                {formatPrice(itemTotal)}
+                              </span>
+                              <button
+                                onClick={() => toggleItem(item.id)}
+                                className="p-1 text-warm-dark/40 hover:text-coral-600 hover:bg-coral-50 rounded-lg transition cursor-pointer flex items-center justify-center"
+                                title="刪除項目"
+                                id={`delete-selected-${item.id}`}
+                              >
+                                <Trash2 className="w-3.5 h-3.5 stroke-[2]" />
+                              </button>
+                            </div>
                           </div>
                         );
                       })}
