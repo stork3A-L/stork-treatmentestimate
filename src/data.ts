@@ -740,10 +740,17 @@ export const MEDICATION_ITEMS: PricingItem[] = [
     category: "other_med"
   },
   {
-    id: "benlysta",
-    name: "奔麗生注射液 (Benlysta)",
-    spec: "Benlysta",
+    id: "benlysta_400mg",
+    name: "奔麗生注射液 (Benlysta) 400mg",
+    spec: "Benlysta 400mg",
     basePrice: 22000,
+    category: "other_med"
+  },
+  {
+    id: "benlysta_120mg",
+    name: "奔麗生注射液 (Benlysta) 120mg",
+    spec: "Benlysta 120mg",
+    basePrice: 6600,
     category: "other_med"
   },
   {

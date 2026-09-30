@@ -256,12 +256,23 @@ export default function App() {
     // Helper to filter individual lists
     const filterList = (items: PricingItem[]) => {
       if (!query) return items;
-      return items.filter(item => 
-        item.name.toLowerCase().includes(query) ||
-        (item.englishName && item.englishName.toLowerCase().includes(query)) ||
-        (item.spec && item.spec.toLowerCase().includes(query)) ||
-        (item.notes && item.notes.toLowerCase().includes(query))
-      );
+      const cleanQuery = query.replace(/\s+/g, "");
+      return items.filter(item => {
+        const name = item.name.toLowerCase();
+        const eng = (item.englishName || "").toLowerCase();
+        const spec = (item.spec || "").toLowerCase();
+        const notes = (item.notes || "").toLowerCase();
+        return (
+          name.includes(query) ||
+          name.replace(/\s+/g, "").includes(cleanQuery) ||
+          eng.includes(query) ||
+          eng.replace(/\s+/g, "").includes(cleanQuery) ||
+          spec.includes(query) ||
+          spec.replace(/\s+/g, "").includes(cleanQuery) ||
+          notes.includes(query) ||
+          notes.replace(/\s+/g, "").includes(cleanQuery)
+        );
+      });
     };
 
     const treatments = filterList(TREATMENT_ITEMS);
